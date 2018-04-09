@@ -38,9 +38,9 @@ export class UserService {
     ];
   }
 
-  getData() {
+  getData() { 
     this.data = new Observable(observer => {
-      setTimeout(() => {
+      setTimeout(() => { ///Demonstrates observables in console log, by returing below values
         observer.next(1);
       }, 1000);
 
@@ -57,7 +57,7 @@ export class UserService {
       }, 4000);
     });
 
-    return this.data;
+    return this.data; // returns data in any given array
   }
 
   getUsers(): Observable<User[]> {
